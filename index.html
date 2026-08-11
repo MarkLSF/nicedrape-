@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麗絲迪 (NICEDRAPE Solar Protection System Co., Ltd.) | 智能遮陽與建築工程方案</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#314392',
+                            gray: '#757981',
+                            silver: '#dcdddf',
+                            light: '#F8F9FA'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome 圖示 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入自訂 style.css 樣式表 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入獨立 JavaScript 檔 -->
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-brand-light text-slate-800 font-sans antialiased">
+
+    <!-- 1. Header 導覽列 -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-brand-silver">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- 品牌 Logo -->
+            <a href="#" class="flex items-center space-x-3">
+                <img src="logo.png" alt="麗絲迪 NICEDRAPE Logo" class="h-12 w-auto object-contain">
+                <span class="text-xl font-bold text-brand-blue tracking-wide border-l-2 border-brand-blue pl-3 hidden md:inline">麗絲迪</span>
+            </a>
+
+            <!-- 桌機版選單 -->
+            <nav class="hidden md:flex space-x-8 text-brand-gray font-medium">
+                <a href="#about" class="hover:text-brand-blue transition">關於麗絲迪</a>
+                <a href="#silverscreen" class="hover:text-brand-blue transition text-brand-blue font-semibold">SilverScreen 旗艦面料</a>
+                <a href="#products" class="hover:text-brand-blue transition">產品系列</a>
+                <a href="#certifications" class="hover:text-brand-blue transition">國際認證</a>
+                <a href="#projects" class="hover:text-brand-blue transition">工程案例</a>
+                <a href="#contact" class="hover:text-brand-blue transition">聯絡據點</a>
+            </nav>
+
+            <!-- 行動呼籲按鈕 -->
+            <a href="#contact" class="hidden sm:inline-block bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-900 transition shadow">專案諮詢</a>
+
+            <!-- 手機版選單按鈕 -->
+            <button id="menu-btn" class="md:hidden text-brand-gray hover:text-brand-blue focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- 手機版下拉選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-silver px-6 py-4 space-y-3">
+            <a href="#about" class="block text-brand-gray hover:text-brand-blue">關於麗絲迪</a>
+            <a href="#silverscreen" class="block text-brand-blue font-semibold">SilverScreen 旗艦面料</a>
+            <a href="#products" class="block text-brand-gray hover:text-brand-blue">產品系列</a>
+            <a href="#certifications" class="block text-brand-gray hover:text-brand-blue">國際認證</a>
+            <a href="#projects" class="block text-brand-gray hover:text-brand-blue">工程案例</a>
+            <a href="#contact" class="block text-brand-gray hover:text-brand-blue">聯絡據點</a>
+            <a href="#contact" class="block w-full text-center bg-brand-blue text-white py-2 rounded-lg">專案諮詢</a>
+        </div>
+    </header>
+
+    <!-- 2. Hero Section 主視覺區 -->
+    <section class="relative bg-brand-blue text-white py-24 md:py-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#dcdddf_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block bg-white/10 text-brand-silver border border-brand-silver/30 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wider uppercase mb-6">
+                    傳承 60 年 · 建築遮陽領導品牌
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                    智能引領綠色建築<br>
+                    <span class="text-brand-silver">節能遮陽與工程專家</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+                    麗絲迪總部設於香港，深耕建築工程 60 載。我們致力於研發結合再生材料與高反射科技的智能遮陽方案，為全球頂尖建築創造舒適、永續的節能空間。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="bg-white text-brand-blue hover:bg-brand-silver text-center px-8 py-3.5 rounded-lg font-semibold shadow-lg transition">探索產品系列</a>
+                    <a href="#silverscreen" class="border border-brand-silver/50 hover:border-white text-white text-center px-8 py-3.5 rounded-lg font-semibold transition">了解 SilverScreen 面料</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About Section 品牌簡介 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-brand-blue font-bold uppercase tracking-wider text-sm">About NICEDRAPE</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-6">六十載匠心品質，服務遍及大中華區</h2>
+                    <p class="text-brand-gray leading-relaxed mb-4">
+                        「麗絲迪」(NICEDRAPE Solar Protection System Co., Ltd.) 自成立以來已有近 60 年的輝煌歷史。總部設立於國際都市香港，並先後於北京、上海及廣州等核心城市設立直營辦事處，建構出完整的專業服務網絡。
+                    </p>
+                    <p class="text-brand-gray leading-relaxed mb-6">
+                        我們生產的遮陽系列產品兼具耐用、多功能與環保節能等特質。廣泛採用再生材料與環保物料，協助各類大型建築專案取得全球領先的綠建築認證。
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-4 border-t border-brand-silver pt-6">
+                        <div>
+                            <p class="text-3xl font-extrabold text-brand-blue">60+</p>
+                            <p class="text-xs text-brand-gray mt-1">年品牌歷史</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-brand-blue">4 大</p>
+                            <p class="text-xs text-brand-gray mt-1">大灣區及核心據點</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-extrabold text-brand-blue">100%</p>
+                            <p class="text-xs text-brand-gray mt-1">環保再生研發理念</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-light p-8 rounded-2xl border border-brand-silver shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                        <i class="fa-solid fa-earth-asia text-brand-blue mr-3"></i> 跨區域服務網絡
+                    </h3>
+                    <ul class="space-y-4 text-slate-700">
+                        <li class="flex items-start">
+                            <span class="bg-brand-blue text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">港</span>
+                            <div>
+                                <strong>香港總部 (Hong Kong Headquarters)</strong>
+                                <p class="text-sm text-brand-gray">統籌全球與國際級建築遮陽專案規劃。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-brand-gray text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">京</span>
+                            <div>
+                                <strong>北京辦事處 (Beijing Office)</strong>
+                                <p class="text-sm text-brand-gray">深耕華北地區大型商業與公共建築工程。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-brand-gray text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">滬</span>
+                            <div>
+                                <strong>上海辦事處 (Shanghai Office)</strong>
+                                <p class="text-sm text-brand-gray">服務華東市場企業總部與高階酒店項目。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-brand-gray text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3 mt-0.5">粵</span>
+                            <div>
+                                <strong>廣州辦事處 (Guangzhou Office)</strong>
+                                <p class="text-sm text-brand-gray">輻射華南區域綠色建築與住宅工程。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SilverScreen Spotlight 旗艦面料專區 -->
+    <section id="silverscreen" class="py-20 bg-brand-blue text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-silver text-sm font-semibold tracking-wider uppercase">Flagship Fabric Technology</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold mt-2 mb-4">SilverScreen 旗艦面料</h2>
+                <p class="text-gray-200 text-lg">太陽熱能與光耀控制的終極解決方案</p>
+            </div>
+
+            <!-- 主介紹區 -->
+            <div class="bg-white/10 border border-brand-silver/30 rounded-2xl p-8 md:p-12 mb-12 backdrop-blur-sm">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-brand-silver mb-4">超薄鍍鋁塗層 · 四季節能大師</h3>
+                        <p class="text-gray-200 leading-relaxed mb-4">
+                            SilverScreen 窗飾面料擁有極薄的金屬鍍鋁塗層，可在不影響視野的前提下，大大降低太陽熱能傳遞。
+                        </p>
+                        <p class="text-gray-200 leading-relaxed mb-6">
+                            具備極高的反射熱能特性：**夏季將熱能拒諸門外**，顯著減少空調負荷；**冬季防止室內暖氣流失**，大幅降低空調與暖氣能源成本，從源頭減少二氧化碳廢氣排放。
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-white/10 text-brand-silver text-sm px-3 py-1 rounded-full border border-brand-silver/30">無甲醛 (Formaldehyde-Free)</span>
+                            <span class="bg-white/10 text-brand-silver text-sm px-3 py-1 rounded-full border border-brand-silver/30">不含 PVC (PVC-Free)</span>
+                            <span class="bg-white/10 text-brand-silver text-sm px-3 py-1 rounded-full border border-brand-silver/30">100% 可循環再造</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-6 bg-white/10 rounded-xl border border-brand-silver/30">
+                            <h4 class="font-bold text-lg text-white mb-2">SilverScreen Performance</h4>
+                            <p class="text-sm text-gray-200">極致熱能反射效能，專為極端採光與高節能要求的商業大樓設計。</p>
+                        </div>
+                        <div class="p-6 bg-white/10 rounded-xl border border-brand-silver/30">
+                            <h4 class="font-bold text-lg text-white mb-2">SilverScreen Enviro (G2 新結構)</h4>
+                            <p class="text-sm text-gray-200">採用高反射率金屬鍍鋁紡織面料，保留鮮明質感外觀與優異透視度，完美適用於**捲簾、羅馬簾及屏風簾**。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Products Section 產品系列 -->
+    <section id="products" class="py-20 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-blue text-sm font-semibold tracking-wider uppercase">Our Product Portfolio</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">多樣化遮陽與工程系統</h2>
+                <p class="text-brand-gray">所有產品均由環保與再生材料製成，兼具高耐用性與多功能特質。</p>
+            </div>
+
+            <!-- 9 大產品網格（加上 product-card 類別配合 style.css 動畫效果） -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-scroll"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">捲簾 (Roller Blinds)</h3>
+                    <p class="text-brand-gray text-sm">適用 SilverScreen Performance 及 Enviro 面料，極簡俐落，高效遮陽。</p>
+                </div>
+
+                <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">百葉簾 (Venetian Blinds)</h3>
+                    <p class="text-brand-gray text-sm">精準控光與角度調節，耐用金屬或環保材質，適合辦公空間。</p>
+                </div>
+
+                <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-rug"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">百摺簾 (Pleated Blinds)</h3>
+                    <p class="text-brand-gray text-sm">立體摺痕美學，高密合度，提供良好的隔熱與隱私防護。</p>
+                </div>
+
+                <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">窗簾路軌 (Curtain Tracks)</h3>
+                    <p class="text-brand-gray text-sm">支援智能電動與高承載手動路軌系統，運行順暢極靜音。</p>
+                </div>
+
+                <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-border-all"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">羅馬簾 (Roman Blinds)</h3>
+                    <p class="text-brand-gray text-sm">結合紡織品質感與層次疊加美感，完美兼容 Enviro 節能面料。</p>
+                </div>
+
+                <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-vector-square"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">屏風簾 (Panel Blinds)</h3>
+                    <p class="text-brand-gray text-sm">大面積落地窗與空間隔斷的理想選擇，展現大氣優雅風格。</p>
+                </div>
+
+                <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">天幕簾 (Skylight Blinds)</h3>
+                    <p class="text-brand-gray text-sm">專為採光天井與玻璃屋設計，高效擋熱，保持室內舒適體感。</p>
+                </div>
+
+                <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">維迪紗簾 (Veri Shades)</h3>
+                    <p class="text-brand-gray text-sm">結合布簾柔美與百葉調光特色，可自由穿梭其間，極致優雅。</p>
+                </div>
+
+                <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
+                    <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">垂直簾 (Vertical Blinds)</h3>
+                    <p class="text-brand-gray text-sm">適合高窗與辦公區域，防塵好清理，輕鬆操控光線方向。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Certifications & Green Standards 國際認證與綠建築標章 -->
+    <section id="certifications" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-blue text-sm font-semibold tracking-wider uppercase">Certifications & Standards</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">國際權威認證與綠建築加分</h2>
+                <p class="text-brand-gray">麗絲迪產品生產過程與廠房符合嚴格國際環保標準，助力專案獲取高額綠建築評級。</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-brand-light rounded-xl border border-brand-silver">
+                    <i class="fa-solid fa-certificate text-3xl text-brand-blue mb-3"></i>
+                    <h3 class="font-bold text-slate-900">ISO 14001</h3>
+                    <p class="text-xs text-brand-gray mt-1">環境管理體系國際認證</p>
+                </div>
+                <div class="p-6 bg-brand-light rounded-xl border border-brand-silver">
+                    <i class="fa-solid fa-leaf text-3xl text-brand-blue mb-3"></i>
+                    <h3 class="font-bold text-slate-900">Öko-Tex Standard</h3>
+                    <p class="text-xs text-brand-gray mt-1">紡織品有害物質安全認證</p>
+                </div>
+                <div class="p-6 bg-brand-light rounded-xl border border-brand-silver">
+                    <i class="fa-solid fa-shield-halved text-3xl text-brand-blue mb-3"></i>
+                    <h3 class="font-bold text-slate-900">Greenguard</h3>
+                    <p class="text-xs text-brand-gray mt-1">室內空氣品質金級認證</p>
+                </div>
+                <div class="p-6 bg-brand-light rounded-xl border border-brand-silver">
+                    <i class="fa-solid fa-building-circle-check text-3xl text-brand-blue mb-3"></i>
+                    <h3 class="font-bold text-slate-900">USGBC & Eco-specifier</h3>
+                    <p class="text-xs text-brand-gray mt-1">美國綠建築協會推薦</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-blue-50 border border-blue-100 rounded-xl p-6 text-center text-slate-700">
+                <p class="font-medium">
+                    <i class="fa-solid fa-circle-check text-brand-blue mr-2"></i>
+                    SilverScreen 等面料大大有助於綠色建築項目評價標準：
+                    <span class="font-bold text-brand-blue">LEED</span>、
+                    <span class="font-bold text-brand-blue">Green Star</span> 及 
+                    <span class="font-bold text-brand-blue">BREEAM</span> 獲取更高分數。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Projects Section 工程案例 -->
+    <section id="projects" class="py-20 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-blue text-sm font-semibold tracking-wider uppercase">Project Showcase</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">跨領域成功工程範例</h2>
+                <p class="text-brand-gray">我們參與的項目遍及五星級酒店、A 級辦公大樓、高級住宅、連鎖餐廳與商業機構。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-brand-gray">
+                        <i class="fa-solid fa-hotel text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-blue uppercase">Hotel & Hospitality</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">國際奢華酒店專案</h3>
+                        <p class="text-brand-gray text-sm">導入智能客控電動窗簾與高遮光節能面料，提升住客舒適度與營運效益。</p>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-brand-gray">
+                        <i class="fa-solid fa-building text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-blue uppercase">Commercial Office</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">A 級甲級辦公大樓</h3>
+                        <p class="text-slate-600 text-sm">全面採用 SilverScreen 高反射面料捲簾，大幅降低夏季空調電力消耗。</p>
+                    </div>
+                </div>
+
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-brand-gray">
+                        <i class="fa-solid fa-utensils text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold text-brand-blue uppercase">Retail & Restaurant</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">高端餐廳與連鎖商業</h3>
+                        <p class="text-brand-gray text-sm">結合維迪紗簾與屏風簾設計，兼顧用餐隱私與軟裝視覺質感。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Contact & Footprint -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-blue text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">聯絡我們與據點</h2>
+                <p class="text-brand-gray">歡迎與我們的遮陽工程專家團隊洽詢專案與產品細節。</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 諮詢表單 -->
+                <div class="bg-brand-light p-8 rounded-2xl border border-brand-silver">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6">發送專案諮詢需求</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">姓名 / 公司名稱</label>
+                            <input type="text" required class="w-full px-4 py-2.5 rounded-lg border border-brand-silver focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none" placeholder="例如：張先生 / ABC 建築設計有限公司">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">電郵地址</label>
+                            <input type="email" required class="w-full px-4 py-2.5 rounded-lg border border-brand-silver focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none" placeholder="name@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">專案類型</label>
+                            <select class="w-full px-4 py-2.5 rounded-lg border border-brand-silver focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none">
+                                <option>酒店 / 住宿工程</option>
+                                <option>辦公大樓 / 商業機構</option>
+                                <option>高端住宅工程</option>
+                                <option>餐廳 / 零售空間</option>
+                                <option>其他諮詢</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1">諮詢內容</label>
+                            <textarea rows="4" required class="w-full px-4 py-2.5 rounded-lg border border-brand-silver focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none" placeholder="請填寫您的需求（例如：SilverScreen 面料規格、捲簾數量估價等）"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-blue-900 text-white font-semibold py-3 rounded-lg shadow transition">送出查詢</button>
+                    </form>
+                </div>
+
+                <!-- 地圖與據點 -->
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-4">香港總部位置</h3>
+                        <p class="text-brand-gray mb-4 text-sm">
+                            <i class="fa-solid fa-location-dot text-brand-blue mr-2"></i> 香港總部統籌大中華區營運與技術支援
+                        </p>
+                        <div class="w-full h-64 rounded-xl overflow-hidden shadow-inner border border-brand-silver mb-6">
+                            <iframe 
+                                title="麗絲迪香港總部地圖"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118106.7001022138!2d114.10859695!3d22.3193039!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040081121d5a7d%3A0xb35a0928e469e80e!2sHong%20Kong!5e0!3m2!1sen!2shk!4v1700000000000!5m2!1sen!2shk" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 text-sm text-brand-gray border-t border-brand-silver pt-4">
+                        <div>
+                            <strong class="text-slate-900 block">北京辦事處</strong>
+                            <span class="text-xs">華北地區專案支援</span>
+                        </div>
+                        <div>
+                            <strong class="text-slate-900 block">上海辦事處</strong>
+                            <span class="text-xs">華東地區專案支援</span>
+                        </div>
+                        <div>
+                            <strong class="text-slate-900 block">廣州辦事處</strong>
+                            <span class="text-xs">華南地區專案支援</span>
+                        </div>
+                        <div>
+                            <strong class="text-slate-900 block">香港總部</strong>
+                            <span class="text-xs">國際與港澳地區專案</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Footer 頁尾 -->
+    <footer class="bg-brand-blue text-white py-12 border-t border-brand-silver/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <img src="logo.png" alt="NICEDRAPE Logo" class="h-8 w-auto filter brightness-200">
+                <span class="text-sm text-gray-300">© 2026 麗絲迪 (NICEDRAPE Solar Protection System Co., Ltd.). 保留所有權利。</span>
+            </div>
+            <div class="flex space-x-6 text-sm text-gray-300">
+                <a href="#about" class="hover:text-white transition">關於我們</a>
+                <a href="#silverscreen" class="hover:text-white transition">SilverScreen</a>
+                <a href="#products" class="hover:text-white transition">產品系列</a>
+                <a href="#contact" class="hover:text-white transition">聯絡我們</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

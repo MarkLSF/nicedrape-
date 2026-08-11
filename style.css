@@ -1,0 +1,53 @@
+/* style.css - 麗絲迪 (NICEDRAPE Solar Protection System Co., Ltd.) 專屬 CSS 樣式 */
+
+/* 1. 全局品牌色彩變數 */
+:root {
+  --brand-blue: #314392;
+  --brand-gray: #757981;
+  --brand-silver: #dcdddf;
+  --brand-light: #f8f9fa;
+}
+
+/* 2. 基礎頁面設定與平滑滾動 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--brand-light);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* 3. 客製化瀏覽器滾動條 (Scrollbar) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-gray);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-blue);
+}
+
+/* 4. 微動畫與卡片互動特效 */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--brand-blue);
+  box-shadow: 0 10px 20px rgba(49, 67, 146, 0.08);
+}
+
+/* 5. 地圖容器外框補強 */
+iframe {
+  filter: contrast(102%);
+}
