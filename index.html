@@ -332,46 +332,154 @@
         </div>
     </section>
 
-    <!-- 7. Projects Section 工程案例 -->
+    <!-- 7. Projects Section 工程案例（含圖片與工程名稱） -->
     <section id="projects" class="py-20 bg-brand-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-brand-blue text-sm font-semibold tracking-wider uppercase">Project Showcase</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">跨領域成功工程範例</h2>
-                <p class="text-brand-gray">我們參與的項目遍及五星級酒店、A 級辦公大樓、高級住宅、連鎖餐廳、醫院、學校與商業機構。</p>
+                <p class="text-brand-gray">我們的遮陽工程技術深入多個行業範疇，打造高品質、可持續的空間體驗。</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver">
-                    <div class="h-48 bg-slate-200 flex items-center justify-center text-brand-gray">
-                        <i class="fa-solid fa-hotel text-4xl"></i>
+            <!-- 7 大領域獨立卡片展示網格（附圖片與工程名稱） -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. 酒店 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-100">
+                            <img src="https://upload.cc/i1/2026/08/12/tYl9Ed.jpg" alt="香港瑰麗酒店" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-brand-blue uppercase tracking-wider block mb-1">Hotel & Hospitality</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">酒店專案</h3>
+                            <p class="text-brand-gray text-sm mb-4">導入智能客控電動遮陽與高遮光節能布料，兼顧奢華質感與住宿光線舒適度。</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <span class="text-xs font-semibold text-brand-blue uppercase">Hotel & Hospitality</span>
-                        <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">國際奢華酒店專案</h3>
-                        <p class="text-brand-gray text-sm">導入智能客控電動窗簾與高遮光節能面料，提升住客舒適度與營運效益。</p>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-brand-light p-3 rounded-lg border border-brand-silver/60">
+                            <span class="text-xs font-semibold text-brand-blue block">代表工程名稱：</span>
+                            <span class="text-sm font-bold text-slate-800">香港瑰麗酒店</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver">
-                    <div class="h-48 bg-slate-200 flex items-center justify-center text-brand-gray">
-                        <i class="fa-solid fa-building text-4xl"></i>
+                <!-- 2. 辦公大樓 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-100">
+                            <img src="https://upload.cc/i1/2026/08/12/ihQzRg.png" alt="中環港景街1號國際金融中心一期21樓" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-brand-blue uppercase tracking-wider block mb-1">Commercial Office</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">辦公大樓</h3>
+                            <p class="text-brand-gray text-sm mb-4">全面採用 SilverScreen 高反射面料捲簾，大幅降低夏季空調耗能，優化辦公防眩光環境。</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <span class="text-xs font-semibold text-brand-blue uppercase">Commercial Office</span>
-                        <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">A 級甲級辦公大樓</h3>
-                        <p class="text-slate-600 text-sm">全面採用 SilverScreen 高反射面料捲簾，大幅降低夏季空調電力消耗。</p>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-brand-light p-3 rounded-lg border border-brand-silver/60">
+                            <span class="text-xs font-semibold text-brand-blue block">代表工程名稱：</span>
+                            <span class="text-sm font-bold text-slate-800">中環港景街1號國際金融中心一期21樓</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver">
-                    <div class="h-48 bg-slate-200 flex items-center justify-center text-brand-gray">
-                        <i class="fa-solid fa-hospital-user text-4xl"></i>
+                <!-- 3. 住宅 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-100">
+                            <img src="https://upload.cc/i1/2026/08/12/tFqyXg.jpg" alt="深水灣深水灣徑8號" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-brand-blue uppercase tracking-wider block mb-1">Residential</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">高級住宅</h3>
+                            <p class="text-brand-gray text-sm mb-4">結合維迪紗簾與羅馬簾風格，為豪宅與住宅項目營造柔和自然光影與居家隱私。</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <span class="text-xs font-semibold text-brand-blue uppercase">Institutional & Healthcare</span>
-                        <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">醫療機構與學校工程</h3>
-                        <p class="text-brand-gray text-sm">採用無毒低 VOC、防黴抗菌與無甲醛認證遮陽系統，維護健康學習與醫療環境。</p>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-brand-light p-3 rounded-lg border border-brand-silver/60">
+                            <span class="text-xs font-semibold text-brand-blue block">代表工程名稱：</span>
+                            <span class="text-sm font-bold text-slate-800">深水灣深水灣徑8號</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. 餐廳 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-100">
+                            <img src="https://upload.cc/i1/2026/08/12/4R7ci5.jpeg" alt="上環德輔道中303號招商局廣場1樓員工餐廳" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-brand-blue uppercase tracking-wider block mb-1">Dining & F&B</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">餐廳專案</h3>
+                            <p class="text-brand-gray text-sm mb-4">運用屏風簾與精緻調光系統，靈活分隔用餐區域，營造雅緻動人的用餐氛圍。</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-brand-light p-3 rounded-lg border border-brand-silver/60">
+                            <span class="text-xs font-semibold text-brand-blue block">代表工程名稱：</span>
+                            <span class="text-sm font-bold text-slate-800">上環德輔道中303號招商局廣場1樓員工餐廳</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. 商業機構 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-100">
+                            <img src="https://upload.cc/i1/2026/08/12/2oWasZ.jpg" alt="置地遮打摩根大通" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-brand-blue uppercase tracking-wider block mb-1">Commercial Enterprises</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">商業機構</h3>
+                            <p class="text-brand-gray text-sm mb-4">為連鎖旗艦店、展覽空間與金融機構提供耐用、多功能且符合現代美學的遮陽工程方案。</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-brand-light p-3 rounded-lg border border-brand-silver/60">
+                            <span class="text-xs font-semibold text-brand-blue block">代表工程名稱：</span>
+                            <span class="text-sm font-bold text-slate-800">置地遮打摩根大通</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. 醫院 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-100">
+                            <img src="https://upload.cc/i1/2026/08/12/GrAe6B.png" alt="香港公開大學賽馬會校園護理學實驗室" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-brand-blue uppercase tracking-wider block mb-1">Healthcare</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">醫療機構 / 護理中心</h3>
+                            <p class="text-brand-gray text-sm mb-4">採用無甲醛、低 VOC、防黴抗菌與符合室內空氣品質認證（Greenguard）的面料系統。</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-brand-light p-3 rounded-lg border border-brand-silver/60">
+                            <span class="text-xs font-semibold text-brand-blue block">代表工程名稱：</span>
+                            <span class="text-sm font-bold text-slate-800">香港公開大學賽馬會校園護理學實驗室</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. 學校 -->
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-sm border border-brand-silver flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="h-48 overflow-hidden bg-slate-100">
+                            <img src="https://upload.cc/i1/2026/08/12/GgD4Pa.jpg" alt="龍虎山薄扶林道香港大學智華館" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <span class="text-xs font-semibold text-brand-blue uppercase tracking-wider block mb-1">Education</span>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">學校與教育機構</h3>
+                            <p class="text-brand-gray text-sm mb-4">配備高安全性、無毒無害、耐磨損且操作簡便的遮陽設備，保障師生良好的光照學習環境。</p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-0">
+                        <div class="bg-brand-light p-3 rounded-lg border border-brand-silver/60">
+                            <span class="text-xs font-semibold text-brand-blue block">代表工程名稱：</span>
+                            <span class="text-sm font-bold text-slate-800">龍虎山薄扶林道香港大學智華館</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -403,10 +511,10 @@
                         <div>
                             <label class="block text-sm font-medium text-slate-700 mb-1">專案類型</label>
                             <select class="w-full px-4 py-2.5 rounded-lg border border-brand-silver focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none">
-                                <option>香港/澳門/海外工程諮詢</option>
-                                <option>國內工程諮詢 (華北/華東/華南)</option>
-                                <option>酒店 / 住宿工程</option>
-                                <option>辦公大樓 / 商業機構</option>
+                                <option>酒店專案工程</option>
+                                <option>辦公大樓工程</option>
+                                <option>住宅專案工程</option>
+                                <option>餐廳 / 商業機構工程</option>
                                 <option>醫院 / 學校專案工程</option>
                                 <option>研發與生產物流查詢</option>
                             </select>
