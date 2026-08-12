@@ -1,6 +1,6 @@
-/* style.css - 麗絲迪 (NICEDRAPE Solar Protection System Co., Ltd.) 專屬 CSS 樣式 */
+/* style.css - 麗絲迪 (NICEDRAPE Solar Protection System Co., Ltd.) 官方網站專屬樣式 */
 
-/* 1. 全局品牌色彩變數 */
+/* 1. 品牌全局色彩變數定義 */
 :root {
   --brand-blue: #314392;
   --brand-gray: #757981;
@@ -8,17 +8,18 @@
   --brand-light: #f8f9fa;
 }
 
-/* 2. 基礎頁面設定與平滑滾動 */
+/* 2. 全局基礎設定與平滑滾動 */
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--brand-light);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #1e293b;
 }
 
-/* 3. 客製化瀏覽器滾動條 (Scrollbar) */
+/* 3. 客製化瀏覽器滾動條 (Webkit Scrollbar) */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -36,18 +37,36 @@ body {
   background: var(--brand-blue);
 }
 
-/* 4. 微動畫與卡片互動特效 */
+/* 4. 產品與 7 大工程領域卡片微動畫特效 */
 .product-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              border-color 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: var(--brand-blue);
-  box-shadow: 0 10px 20px rgba(49, 67, 146, 0.08);
+  box-shadow: 0 12px 24px -6px rgba(49, 67, 146, 0.12);
 }
 
-/* 5. 地圖容器外框補強 */
+/* 5. 工程實景圖片 Hover 縮放微動畫 */
+.product-card img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* 6. 嵌入式 Google 地圖視窗細節補強 */
 iframe {
   filter: contrast(102%);
+}
+
+/* 7. 表單元件 Focus 聚焦光暈美化 */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--brand-blue) !important;
+  box-shadow: 0 0 0 3px rgba(49, 67, 146, 0.15) !important;
 }
