@@ -24,7 +24,7 @@
     </script>
     <!-- FontAwesome 圖示 CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 引入自訂 style.css 樣式表 -->
+    <!-- 引入自訂 style.css -->
     <link rel="stylesheet" href="style.css">
     <!-- 引入獨立 JavaScript 檔 -->
     <script src="script.js" defer></script>
@@ -172,7 +172,6 @@
                 <p class="text-gray-200 text-lg">太陽熱能與光耀控制的終極解決方案</p>
             </div>
 
-            <!-- 主介紹區 -->
             <div class="bg-white/10 border border-brand-silver/30 rounded-2xl p-8 md:p-12 mb-12 backdrop-blur-sm">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     <div>
@@ -213,7 +212,6 @@
                 <p class="text-brand-gray">所有產品均由環保與再生材料製成，兼具高耐用性與多功能特質。</p>
             </div>
 
-            <!-- 9 大產品網格（加上 product-card 類別配合 style.css 動畫效果） -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="product-card bg-white p-6 rounded-xl shadow-sm border border-brand-silver">
                     <div class="w-12 h-12 bg-blue-50 text-brand-blue rounded-lg flex items-center justify-center mb-4 text-xl">
@@ -380,7 +378,7 @@
         </div>
     </section>
 
-    <!-- 8. Contact & Footprint -->
+    <!-- 8. Contact & Footprint（更新據點詳細資訊與地圖） -->
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -420,17 +418,18 @@
                     </form>
                 </div>
 
-                <!-- 地圖與據點 -->
+                <!-- 地圖與詳細據點 -->
                 <div class="flex flex-col justify-between">
                     <div>
                         <h3 class="text-xl font-bold text-slate-900 mb-4">香港總部位置</h3>
                         <p class="text-brand-gray mb-4 text-sm">
-                            <i class="fa-solid fa-location-dot text-brand-blue mr-2"></i> 香港總部統籌大中華區營運與技術支援
+                            <i class="fa-solid fa-location-dot text-brand-blue mr-2"></i> 香港荃灣柴灣角街84-92號順豐工業中心28字樓I座
                         </p>
+                        <!-- 地圖精準定位至荃灣柴灣角街順豐工業中心 -->
                         <div class="w-full h-64 rounded-xl overflow-hidden shadow-inner border border-brand-silver mb-6">
                             <iframe 
                                 title="麗絲迪香港總部地圖"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118106.7001022138!2d114.10859695!3d22.3193039!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040081121d5a7d%3A0xb35a0928e469e80e!2sHong%20Kong!5e0!3m2!1sen!2shk!4v1700000000000!5m2!1sen!2shk" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.878788647891!2d114.1082531!3d22.3770678!2m3!1f0!2f0!3f0!2m3!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f8e562ef6dd9%3A0x6b45a953e5e3962!2sSuperluck%20Industrial%20Centre%2C%2084-92%20Chai%20Wan%20Kok%20St%20Tsuen%20Wan!5e0!3m2!1sen!2shk!4v1700000000000!5m2!1sen!2shk" 
                                 width="100%" 
                                 height="100%" 
                                 style="border:0;" 
@@ -441,22 +440,31 @@
                         </div>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4 text-sm text-brand-gray border-t border-brand-silver pt-4">
-                        <div>
-                            <strong class="text-slate-900 block">北京辦事處</strong>
-                            <span class="text-xs">華北地區專案支援</span>
+                    <!-- 4 大據點完整詳細聯絡卡片 -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-brand-gray border-t border-brand-silver pt-4">
+                        <div class="p-3 bg-brand-light rounded-lg border border-brand-silver/50">
+                            <strong class="text-slate-900 text-sm block mb-1">香港總部</strong>
+                            <p class="mb-1"><i class="fa-solid fa-location-dot mr-1 text-brand-blue"></i>香港荃灣柴灣角街84-92號順豐工業中心28字樓I座</p>
+                            <p class="mb-1"><i class="fa-solid fa-phone mr-1 text-brand-blue"></i>+852 2413 3119</p>
+                            <p><i class="fa-solid fa-envelope mr-1 text-brand-blue"></i>hongkong@nicedrape.com.hk</p>
                         </div>
-                        <div>
-                            <strong class="text-slate-900 block">上海辦事處</strong>
-                            <span class="text-xs">華東地區專案支援</span>
+                        <div class="p-3 bg-brand-light rounded-lg border border-brand-silver/50">
+                            <strong class="text-slate-900 text-sm block mb-1">廣州辦事處</strong>
+                            <p class="mb-1"><i class="fa-solid fa-location-dot mr-1 text-brand-blue"></i>廣州市增城區新塘鎮鐵塔大道55號廠房1棟二樓201室</p>
+                            <p class="mb-1"><i class="fa-solid fa-phone mr-1 text-brand-blue"></i>+020-3288 7529</p>
+                            <p><i class="fa-solid fa-envelope mr-1 text-brand-blue"></i>guangzhou@nicedrape.com.hk</p>
                         </div>
-                        <div>
-                            <strong class="text-slate-900 block">廣州辦事處</strong>
-                            <span class="text-xs">華南地區專案支援</span>
+                        <div class="p-3 bg-brand-light rounded-lg border border-brand-silver/50">
+                            <strong class="text-slate-900 text-sm block mb-1">上海辦事處</strong>
+                            <p class="mb-1"><i class="fa-solid fa-location-dot mr-1 text-brand-blue"></i>上海市徐匯區漕溪路250號銀海大廈A座311室</p>
+                            <p class="mb-1"><i class="fa-solid fa-phone mr-1 text-brand-blue"></i>+21-6451 6281</p>
+                            <p><i class="fa-solid fa-envelope mr-1 text-brand-blue"></i>shanghai@nicedrape.com.hk</p>
                         </div>
-                        <div>
-                            <strong class="text-slate-900 block">香港總部</strong>
-                            <span class="text-xs">國際與港澳地區專案</span>
+                        <div class="p-3 bg-brand-light rounded-lg border border-brand-silver/50">
+                            <strong class="text-slate-900 text-sm block mb-1">北京辦事處</strong>
+                            <p class="mb-1"><i class="fa-solid fa-location-dot mr-1 text-brand-blue"></i>北京市朝陽區大洋路333號B座一層103室</p>
+                            <p class="mb-1"><i class="fa-solid fa-phone mr-1 text-brand-blue"></i>+010-5331 1572</p>
+                            <p><i class="fa-solid fa-envelope mr-1 text-brand-blue"></i>beijing@nicedrape.com.hk</p>
                         </div>
                     </div>
                 </div>
@@ -468,7 +476,7 @@
     <footer class="bg-brand-blue text-white py-12 border-t border-brand-silver/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <div class="flex items-center space-x-3">
-                <img src="logo.png" alt="NICEDRAPE Logo" class="h-8 w-auto filter brightness-200">
+                <img src="https://upload.cc/i1/2026/08/12/jiLRXY.png" alt="NICEDRAPE Logo" class="h-8 w-auto filter brightness-200">
                 <span class="text-sm text-gray-300">© 2026 麗絲迪 (NICEDRAPE Solar Protection System Co., Ltd.). 保留所有權利。</span>
             </div>
             <div class="flex space-x-6 text-sm text-gray-300">
