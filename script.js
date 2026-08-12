@@ -6,11 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (menuBtn && mobileMenu) {
+        // 點擊漢堡選單按鈕切換顯示/隱藏
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // 點擊手機選單內的任意連結後自動收起選單
+        // 點擊手機選單內任意連結後自動收起選單
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -19,12 +20,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. 表單提交模擬提示與重置
-    const contactForm = document.querySelector('form');
+    // 2. 專案諮詢表單提交處理與反饋
+    const contactForm = document.querySelector('#contact form');
     if (contactForm) {
         contactForm.addEventListener('submit', (event) => {
             event.preventDefault();
-            alert('感謝您的查詢，麗絲迪 (NICEDRAPE) 專員將盡快與您聯絡！');
+
+            // 彈出感謝訊息並指引專員對接
+            alert('感謝您的專案查詢！麗絲迪 (NICEDRAPE Solar Protection System Co., Ltd.) 遮陽工程專家團隊將儘快與您聯絡。');
+
+            // 自動重置表單欄位
             contactForm.reset();
         });
     }
